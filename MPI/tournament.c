@@ -19,9 +19,7 @@ struct match
 	int role;
 	int opponent_node;
 
-
 };
-
 
 void tournament_barrier(struct match array[dyn][10], int rank, int num_round_numbers)
 {
@@ -138,9 +136,9 @@ int main(int argc, char **argv)
 	for( i=0; i<BARRIERS; i++ )
 	{
 		k=0;
-		while(k<10000000)
+		while(k<100)
 			k++;
-		printf("Processor %d reached barrier %d\n",rank, i);
+	//	printf("Processor %d reached barrier %d\n",rank, i);
 
      	time_begin = MPI_Wtime();
      	tournament_barrier(array,rank,num_round_numbers);
